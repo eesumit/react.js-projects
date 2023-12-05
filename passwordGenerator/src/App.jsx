@@ -10,7 +10,6 @@ function App() {
   const passwordRef = useRef(null)
 
 
-
   //function to generate any random password
   const passwordGenerator = useCallback(()=>{
     let pass =""
@@ -24,8 +23,9 @@ function App() {
       pass += str.charAt(char)
     }
     setPassword(pass)
+    setButtonText("copy")
 
-  }, [length, numberAllowed, charAllowed, setPassword])
+  }, [length, numberAllowed, charAllowed, setPassword, setButtonText])
 
 
 
